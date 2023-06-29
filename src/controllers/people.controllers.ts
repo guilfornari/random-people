@@ -1,5 +1,6 @@
 import httpStatus from "http-status";
 import peopleService from "../services/people.services";
+import connection from "../database/database";
 
 async function getPeople(req, res) {
 
@@ -8,7 +9,7 @@ async function getPeople(req, res) {
     console.log("What?");
     console.log(randomPerson);
 
-    res.status(200).send(randomPerson);
+    res.status(httpStatus.OK).send(randomPerson);
 }
 
 const peopleController = {

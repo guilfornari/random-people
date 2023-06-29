@@ -6,7 +6,7 @@ function getPeople() {
 }
 
 const peopleRepos = {
-    getPeople,
+    getPeople
 }
 
 export default peopleRepos;
