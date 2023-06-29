@@ -1,7 +1,7 @@
 import connection from "../database/database";
 
 function getPeople() {
-    let query = "SELECT * FROM people ORDER BY RANDOM() LIMIT 1";
+    let query: string = "SELECT * FROM people ORDER BY RANDOM() LIMIT 1";
     return connection.query(query);
 }
 

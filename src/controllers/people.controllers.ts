@@ -1,13 +1,10 @@
 import httpStatus from "http-status";
 import peopleService from "../services/people.services";
-import connection from "../database/database";
+import { Response } from "express";
 
-async function getPeople(req, res) {
+async function getPeople(req, res: Response) {
 
     const randomPerson = await peopleService.getPeople();
-
-    console.log("What?");
-    console.log(randomPerson);
 
     res.status(httpStatus.OK).send(randomPerson);
 }
